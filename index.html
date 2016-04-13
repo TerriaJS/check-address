@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Check my address</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <div class="row phase-input">
+            <h1>Check my address (mock-up only)</h1>
+            <div class="col-md-12">
+                <label for="address">Your address</label>
+                <div class="input-group">
+                <input id="address" type="text"/>
+                <button id='check' class="btn">Check</button>
+                </div>
+            </div>
+        </div>
+        <div class="row phase-results">
+            <div class="col-md-12">
+            <div id="map">
+            </div>
+            </div>
+        </div>
+        <div class="row phase-results">
+        <div class="col-md-12">
+        <h2>Is this the right location?</h2>
+        
+        </div>
+        </div>
+        <div class="row phase-results">
+        <div class="col-sm-1">
+        <button id='btn-yes' class="btn">Yes</button>
+        </div>
+        <div class="col-sm-1">
+        <button id='btn-no' class="btn">No</button>
+        
+        </div>
+        </div>
+        <div class="row phase-no">
+        <div class="col-md-12">
+        <h2>
+        Drag the map so the crosshair is over the right location.
+        </h2>
+        <div id='latlon'></div>
+
+        <label for="comments">Why does it need to be changed?</label>
+        <br/>
+        <textarea id="comments" maxlength="200" rows="4" cols="80"></textarea>
+        <br/>
+
+        <label for="email">Your email</label>
+        <br/>
+        <input id="email" type="text"/>
+        <br/>
+        <br/>
+
+
+        <button type="submit" class="btn btn-default">Submit an error report</button>
+
+        </div>
+        <div class="row phase-yes">
+        <div class="col-md-6">
+        <h2>
+        Great!
+        </h2>
+        <button>Done</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <script src="check.js"></script>
+    <script>
+        if (location.host.match(/localhost/)) { 
+            document.write('<script src="http://localhost:35729/livereload.js?snipver=1"></' + 'script>');
+        }
+    </script>
+  </body>
+</html>

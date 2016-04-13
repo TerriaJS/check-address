@@ -1,0 +1,31 @@
+#address {
+    width:80%;
+}
+
+.phase-input .input-group {
+    width: 80%;
+}
+
+#map {
+    height: 300px;
+}
+
+.phase-results, .phase-no, .phase-yes {
+    display:none;
+}
+
+#crosshair {
+    width:40px;
+    height:40px;
+    position:absolute;
+    left:calc(50% - 20px);
+    top:calc(50% - 20px);
+    background-image:url(noun_415959_cc.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#comments {
+    width: 40em;
+    height:4em;
+}
